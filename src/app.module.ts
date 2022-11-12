@@ -4,10 +4,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
 import { CatsController } from './cats/cats.controller';
+import { ExceptionsController } from './exceptions/exceptions.controller';
 
 @Module({
   imports: [CatsModule],
-  controllers: [AppController],
+  controllers: [AppController, ExceptionsController],
   providers: [AppService],
 })
 export class AppModule implements NestModule {
