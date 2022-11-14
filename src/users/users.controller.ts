@@ -14,13 +14,13 @@ export class UsersController {
   }
 
   @Get(':id')
-  async findById(@Param('id') id: number): Promise<User | null> {
-    return this.usersService.findById(id);
+  async findOne(@Param('id') id: number): Promise<User | null> {
+    return this.usersService.findOne(id);
   }
 
   @Post()
-  async save(@Body() data: User): Promise<User> {
-    return this.usersService.save(data);
+  async create(@Body() data: User): Promise<User> {
+    return this.usersService.create(data);
   }
 
   @Put(':id')
@@ -29,8 +29,8 @@ export class UsersController {
   }
 
   @Delete(':id')
-  async deleteById(@Param('id') id: number): Promise<User | null> {
-    return this.usersService.deleteById(id);
+  async delete(@Param('id') id: number): Promise<User | null> {
+    return this.usersService.delete(id);
   }
 
 }
