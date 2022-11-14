@@ -6,9 +6,10 @@ import { CatsModule } from './cats/cats.module';
 import { CatsController } from './cats/cats.controller';
 import { ExceptionsController } from './exceptions/exceptions.controller';
 import { UsersModule } from './users/users.module';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
-  imports: [CatsModule, UsersModule],
+  imports: [CatsModule, UsersModule, PostsModule],
   controllers: [AppController, ExceptionsController],
   providers: [AppService],
 })
