@@ -5,9 +5,10 @@ import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
 import { CatsController } from './cats/cats.controller';
 import { ExceptionsController } from './exceptions/exceptions.controller';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [CatsModule],
+  imports: [CatsModule, UsersModule],
   controllers: [AppController, ExceptionsController],
   providers: [AppService],
 })
